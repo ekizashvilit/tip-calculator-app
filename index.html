@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <div class="card">
+        <div class="card-header">
+          <div class="bill-input-wrapper">
+            <label for="bill-input">Bill</label>
+            <input type="text" id="bill-input" />
+            <img src="images/icon-dollar.svg" alt="" />
+          </div>
+          <div class="select-tip-wrapper">
+            <p class="select-tip-title">Select Tip %</p>
+            <div class="select-tip-inner-wrapper">
+              <div class="select-tip-percentage" data-percentage="5">5%</div>
+              <div class="select-tip-percentage" data-percentage="10">10%</div>
+              <div class="select-tip-percentage" data-percentage="15">15%</div>
+              <div class="select-tip-percentage" data-percentage="25">25%</div>
+              <div class="select-tip-percentage" data-percentage="50">50%</div>
+              <div
+                class="select-tip-percentage select-tip-custom"
+                data-percentage="0"
+              >
+                <input type="text" name="" id="" placeholder="Custom" />
+              </div>
+            </div>
+            <div class="number-of-people-wrapper">
+              <label for="number-of-people-input" class="title"
+                >Number of People</label
+              >
+              <input type="text" id="number-of-people-input" />
+              <img src="images/icon-person.svg" alt="" class="" />
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="tip-amount-wrapper">
+            <div class="tip-amount-inner">
+              <p class="title">Tip Amount</p>
+              <p class="sub-title">/ person</p>
+            </div>
+            <div class="tip-amount-value">$4.27</div>
+          </div>
+
+          <div class="total-wrapper">
+            <div class="total-inner">
+              <p class="title">Total</p>
+              <p class="sub-title">/ person</p>
+            </div>
+            <div class="total-value">$32.79</div>
+          </div>
+          <button class="btn-reset">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
