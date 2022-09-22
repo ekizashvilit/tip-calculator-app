@@ -244,7 +244,8 @@ body {
     max-width: 920px;
     margin: 0 auto;
     display: flex;
-    gap: 48px;
+    gap: 3rem;
+    border-radius: 25px;
   }
 
   .card-header, .card-footer {
@@ -263,4 +264,48 @@ body {
     margin-top: 115px;
     margin-bottom: 80px;
   }
+
+  .input-with-image input {
+    margin-bottom: 2.5rem;
+  }
+
+  .select-tip-wrapper {
+    margin-bottom: 2.5rem;
+  }
+
+  .card-footer {
+    padding: 56px 40px 40px;
+  }
+
+  .bill-input-wrapper label {
+    margin-bottom: 10px;
+  }
+
+  .number-of-people-wrapper .title {
+    margin-bottom: 10px;
+  }
+
+  .card-header {
+    padding-top: 17px;
+    padding-left: 13px;
+  }
+
+  .footer-section .value {
+    font-size: 48px;
+  }
+  
+  .centering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-section {
+    margin-bottom: 0;
+  }
+
+  body {
+    padding: 0.125rem 0 0 0;
+  }
+
 }
