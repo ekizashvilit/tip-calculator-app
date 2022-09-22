@@ -90,15 +90,177 @@ select {
 
 
 body {
-    font-family: 'Space Mono', monospace;
-    padding: 3.125rem 0 2.5rem;
-    background-color: var(--light-grayish-cyan);
+  font-family: 'Space Mono', monospace;
+  padding: 3.125rem 0 0 0;
+  background-color: var(--light-grayish-cyan);
 }
 
 .logo {
-    margin: 0 auto 34px;
+  margin: 0 auto 34px;
 }
 
 .card {
-    
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.bill-input-wrapper label {
+  display: block;
+  margin-bottom: 0.375rem;
+}
+
+.input-with-image {
+  position: relative;
+}
+
+.input-with-image img {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.input-with-image input {
+  border: none;
+  width: 100%;
+  background-color: var(--very-light-grayish-cyan);
+  height: 46px;
+  line-height: 46px;
+  padding: 0 1.063rem;
+  text-align: right;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #00474B;
+}
+
+.bill-input-wrapper label, .select-tip-title, .number-of-people-wrapper .title {
+  color: var(--dark-grayish-cyan);
+}
+
+.select-tip-inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.select-tip-percentage {
+  background-color: var(--very-dark-cyan);
+  border-radius: 5px;
+  text-align: center;
+  color: var(--white);
+  padding: 6px 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.select-tip-percentage:hover {
+  background-color: #9FE8DF;
+  color: #00474B;
+}
+
+.select-tip-custom input {
+  width: 100%;
+  border-radius: 5px;
+  height: 48px;
+  border: none;
+  line-height: 48px;
+  font-size: 24px;
+  text-align: right;
+  padding-right: 1.063rem;
+  background-color: var(--very-light-grayish-cyan);
+}
+
+.select-tip-custom {
+  padding: 0;
+}
+
+.select-tip-title {
+  margin-bottom: 1rem;
+}
+
+.select-tip-wrapper {
+  margin-bottom: 2rem;
+}
+
+.select-tip-percentage.active {
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+}
+
+.number-of-people-wrapper .title {
+  margin-bottom: 0.375rem;
+  display: block;
+}
+
+.card-footer {
+  padding: 39px 24px 24px;
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section .title {
+  color: var(--white);
+  text-align: left;
+}
+
+.footer-section .sub-title {
+  text-align: left;
+  color: var(--dark-grayish-cyan);
+  font-size: 13px;
+}
+
+.footer-section .value {
+  color: var(--strong-cyan);
+  font-size: 32px;
+}
+
+.card-footer .btn-reset {
+  text-transform: uppercase;
+  background-color: var(--strong-cyan);
+  width: 100%;
+  border-radius: 5px;
+  height: 48px;
+  line-height: 30px;
+  border: none;
+  color: var(--very-dark-cyan);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-footer .btn-reset:hover {
+  background-color: #9FE8DF;
+}
+
+@media (min-width: 921px) {
+  .card {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    gap: 48px;
+  }
+
+  .card-header, .card-footer {
+    width: 50%;
+  }
+
+  .select-tip-inner-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn-reset {
+    margin-top: 154px;
+  }
+
+  .logo {
+    margin-top: 115px;
+    margin-bottom: 80px;
+  }
 }
