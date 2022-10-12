@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Tip Calculator App](https://ekizashvilit.github.io/tip-calculator-app/)
 
 ## My process
 
