@@ -42,18 +42,21 @@ selectTipBtns.forEach((btn) => {
   });
 });
 
+const getInputValueOrSetDefault =  (currentNode, defaultValue =0)  => {
+  return currentNode.value = currentNode.value ? currentNode.value : defaultValue
+};
 const calculateTip = () => {
-  const billValue = parseFloat(billInput.value);
-  const numberOfPeople = parseFloat(numberOfPeopleInput.value);
+
+  const billValue = parseFloat(getInputValueOrSetDefault(billInput));
+  const numberOfPeople = parseFloat(getInputValueOrSetDefault(numberOfPeopleInput, 1));
   const customTipActive = document.querySelector(".select-tip-custom.active");
   let tipPercentage = parseInt(
     document.querySelector(".select-tip-percentage.active").dataset.percentage
   );
 
   if (customTipActive) {
-    tipPercentage = parseFloat(
-      document.querySelector(".custom-tip-input").value
-    );
+    let costumTipInput = document.querySelector(".custom-tip-input").value ? document.querySelector(".custom-tip-input").value : 0
+    tipPercentage = parseFloat(costumTipInput);
   }
 
   const totalAmount = parseFloat((tipPercentage / 100) * billValue).toFixed(2);
@@ -68,12 +71,7 @@ const calculateTip = () => {
 
 const isNumber = (value) => {
   // Allow Exceptions
-  if (
-    value === "Backspace" ||
-    value === "ArrowLeft" ||
-    value === "ArrowRight" ||
-    value === "."
-  ) {
+  if (["Backspace", "ArrowLeft", "ArrowRight", "."].includes(value) ) {
     return true;
   }
 
